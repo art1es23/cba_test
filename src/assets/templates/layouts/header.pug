@@ -1,0 +1,25 @@
+- var linkValues = [{link: './index.html', name: 'Main'}, {link: './about.html', name: 'About'}, {link: './works.html', name: 'Works'}, {link: './blog.html', name: 'Blog'}, {link: './contacts.html', name: 'Contacts'}]
+- var langValues = ['UA', 'RU', 'EN']
+
+include mixin
+
+header(id = "header" class="header")
+    .logo
+        a.logo__link(href="#")
+            +svg('009-flamingo')
+    .menu
+        span
+    nav.navigation
+        ul.navigation__inner
+            //- +navLink('./index.html', 'Home')
+            //- +navLink('./about.html', 'About')
+            //- +navLink('./works.html', 'Works')
+            //- +navLink('./blog.html', 'Blog')
+            //- +navLink('./contacts.html', 'Contacts')
+            
+            each i in linkValues
+                +navLink(i.link, i.name)
+
+    .choose-language
+        each value in langValues
+            button.choose-language__item #{value}
