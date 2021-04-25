@@ -22,8 +22,10 @@ header(id = "header" class="header")
             a.logo__link(href="#")
                 span.logo__caption Logo
                 
-        .menu
-            span
+        .menu-toggle
+            span.menu-toggle__item.menu-toggle__item--top
+            span.menu-toggle__item.menu-toggle__item--middle
+            span.menu-toggle__item.menu-toggle__item--bottom
         nav.navigation-menu
             ul.navigation-menu__inner
                 each i in linkValues

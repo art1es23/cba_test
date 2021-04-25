@@ -51,16 +51,22 @@ main
     color: $orange
     text-transform: uppercase
 
+    align-items: center
+    // justify-content: center
+    display: flex
+
 .subtitle
     font-family: PlayfairDisplay
     font-weight: 400
     letter-spacing: 0.20000000298023224px
     text-align: left
     font-size: calc( 2rem + 0.75vw )
-    line-height: calc( 2rem + 1vw )
+    line-height: calc( 2rem + 0.75vw )
     width: 100%
     color: $black
     margin: 1.5rem 0
+    align-items: center
+    display: flex
 
 .link
     font-size: calc(0.5rem + 0.75vw)
@@ -97,3 +103,22 @@ main
 @media only screen and ( max-width: 1366px )
     .container
         width: 80%
+        &--hero
+            width: 60%
+@media only screen and ( max-width: 1224px )
+    .container
+        width: 90%
+        &--hero
+            width: 70%
+    .subtitle
+        margin: 0.5rem 0
+@media only screen and ( max-width: 1024px )
+    .container
+        width: 94%
+    .title
+        font-size: calc(1rem + 0.25vw)
+        line-height: calc(1rem + 0.25vw)
+    .subtitle
+        margin: 1.5rem auto
+        font-size: calc( 2.35rem + 0.5vw )
+        line-height: calc( 2.35rem + 0.75vw )

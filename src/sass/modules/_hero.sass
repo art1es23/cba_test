@@ -1,7 +1,6 @@
 @import '../helpers/var'
 
 .hero
-    width: 50%
     min-height: 100vh
     padding: 12.5% 0
     flex-direction: column
@@ -16,6 +15,10 @@
         line-height: calc(1rem + 0.75vw)
         letter-spacing: 0.20000000298023224px
         text-align: justify
-@media only screen and (max-width: 1366px)
+@media only screen and ( max-width: 1024px )
     .hero
-        width: 60%
+        justify-content: center
+        &__description
+            margin: 5rem auto
+            font-size: calc( 1.5rem + 0.25vw)
+            line-height: calc( 1.75rem + 0.5vw)

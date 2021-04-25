@@ -17,8 +17,15 @@
         content: url('../img/work-before-pattern.png')
         transform: translate(85%, 0) scale(1.25)
 
+    &__title
+        align-items: center
+        justify-content: center
+        text-align: center
+
     &__subtitle
         text-align: center
+        align-items: center
+        justify-content: center
         color: $black
 
 .portfolio-slider
@@ -183,8 +190,56 @@ img
 @media only screen and ( max-width: 1366px)
 
     .portfolio-slider
-        grid-template-columns: 55% 40%
+        grid-template-columns: 55% 35%
         grid-gap: 10rem
     .work
         &__content
             width: 62.5%
+
+@media only screen and ( max-width: 1224px)
+    .portfolio
+        padding: 5rem 0
+
+    .portfolio-slider
+        margin-top: 2.5rem
+        grid-template-columns: 47.5% 40%
+        // grid-gap: 12.5rem
+
+    .menu
+        .slide
+            img
+                height: 7.5rem
+    #contentImg
+        > a
+            height: 5rem
+        #dot
+            height: 5rem
+    .work
+        &__content
+            width: 77.5%
+@media only screen and ( max-width: 768px)
+    .portfolio
+        padding: 5rem 0
+
+    .portfolio-slider
+        margin: 0
+        grid-template-columns: 45% 50%
+        grid-gap: 2.5rem
+
+    .menu
+        width: 100%
+        nav
+            display: flex
+            flex-direction: row
+            .slide
+                width: 15rem
+
+    .work
+        transform: translateY(20%)
+        // margin-top: 7.5rem
+        &__content
+            width: 90%
+
+    #contentImg
+        // margin-bottom: 15rem
+        height: 100%

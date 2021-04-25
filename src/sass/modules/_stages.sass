@@ -7,7 +7,15 @@
         display: grid
         padding: 5% 0
 
+    &__title
+        align-items: center
+        justify-content: center
+        text-align: center
+
     &__subtitle
+        text-align: center
+        align-items: center
+        justify-content: center
         color: $white
 
 .stages-list
@@ -87,6 +95,11 @@
     stroke-dasharray: 10 20
 
 @media only screen and ( max-width: 1366px )
+    .progress-ring
+        &__id
+            width: 3.5rem
+            height: 3.5rem
+@media only screen and ( max-width: 1224px )
     .progress-ring
         &__id
             width: 3.5rem
