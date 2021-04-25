@@ -1,0 +1,53 @@
+@import '../helpers/var'
+
+.contact-us
+    width: 100%
+    display: grid
+    background-color: $orange-yellow
+
+    &__form
+        width: 50%
+        margin: 0 auto
+        padding: 2.5% 0
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 1.5rem
+
+    &__title
+        grid-column: 1/3
+        color: $white
+
+    &__description
+        grid-column: 1/3
+        font-size: calc(1.1rem + 0.25vw)
+        line-height: calc(1.1rem + 0.75vw)
+        width: 100%
+        color: $white
+        letter-spacing: 0.005em
+
+    &__input
+        width: 100%
+        margin: 2.5rem 0
+        padding: 1rem 0
+        background-color: $orange-yellow
+        border: none
+        border-bottom: 2px solid rgba($white, 0.5)
+        font-size: calc(1rem + 0.25vw)
+        line-height: calc(1rem + 0.25vw)
+        color: $white
+        letter-spacing: 0.07em
+        font-weight: 500
+
+    &__textarea
+        grid-column: 1/3
+        font-size: calc(1rem + 0.25vw)
+        line-height: calc(1rem + 0.25vw)
+        width: 100%
+        padding: 1rem 0
+        background-color: $orange-yellow
+        border: none
+        border-bottom: 2px solid rgba($white, 0.5)
+        resize: none
+        color: $white
+        letter-spacing: 0.07em
+        font-weight: 500

@@ -1,10 +1,24 @@
+
+- var footerNav = [{link: '#about', name: 'Про нас'}, {link: '#portfolio', name: 'Портфоліо'}, {link: '#stages', name: 'Етапи роботи'}]
+
 include mixin
 footer(id="footer" class="footer")
-    .container.footer--wrapper
-        h2.footer__title Contact with me
-        ul.footer__menu.social-menu
+    .container.footer__inner
+        .footer__item
+            .logo
+                a.logo__link(href="#")
+                    span.logo__caption Logo
+            p.footer__description Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.     
+        ul.footer__item.footer-navigation
+            each el in footerNav 
+                +navLink(el.link, el.name, 'footer-navigation')
+
+        .footer__item.contact
+            p.contact__item #[strong Україна], м.Львів,<br>вул. Зелена 230
+            a(href="tel:+380978577047").contact__item (097)857-70-47
+
+        ul.footer__social-menu.social-menu
             each item in socialLinks
                 li.social-menu__item
                     a.social-menu__link(class=item) #{item}
                         +svg(item)
-    .footer__linse

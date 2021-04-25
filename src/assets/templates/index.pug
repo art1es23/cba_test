@@ -3,12 +3,11 @@ extends layouts/base
 
 block variables 
     - var siteTitle = 'Home';
-    - var socialLinks = ['facebook', 'telegram', 'twitter','instagram', 'linkedin', 'github'];
-    - var servicesItems = ['Design', 'Web-site', 'Responsive', 'Cross-browser', 'Animations', 'Lorem', 'Animations', 'Lorem'];
+    - var socialLinks = ['linkedin', 'facebook', 'instagram'];
+    //- - var servicesItems = ['Design', 'Web-site', 'Responsive', 'Cross-browser', 'Animations', 'Lorem', 'Animations', 'Lorem'];
 
 block content
-    canvas
-    //- include layouts/header
+    include layouts/header
     include layouts/main
     include layouts/footer
 

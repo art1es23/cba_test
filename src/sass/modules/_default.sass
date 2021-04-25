@@ -9,11 +9,12 @@ html,
 body
     margin: 0
     padding: 0
-    font-family: Raleway
+    font-family: "Gilroy"
     overflow-x: hidden
     position: relative
-    background-color: $black
+    // background-color: $black
     color: $white
+    font-weight: 400
 a
     color: $black
     transition: color 0.3s ease-in-out
@@ -35,13 +36,31 @@ main
     width: 70%
     margin: 0 auto
     display: flex
+    flex-direction: column
+    &--hero
+        width: 50%
+        margin: 0 auto
+        display: flex
+        flex-direction: column
 
 .title
-    font-weight: 700
-.insert
-    font-weight: 800
-    color: $yellow
-    margin-left: 0.25rem
+    font-size: calc(1rem + 0.25vw)
+    line-height: calc(1rem + 0.25vw)
+    font-weight: 400
+    letter-spacing: 9.699999809265137px
+    color: $orange
+    text-transform: uppercase
+
+.subtitle
+    font-family: PlayfairDisplay
+    font-weight: 400
+    letter-spacing: 0.20000000298023224px
+    text-align: left
+    font-size: calc( 2rem + 0.75vw )
+    line-height: calc( 2rem + 1vw )
+    width: 100%
+    color: $black
+    margin: 1.5rem 0
 
 .link
     font-size: calc(0.5rem + 0.75vw)
@@ -72,22 +91,9 @@ main
         background-color: black
         color: $white
 
-.btn
-    display: flex
-    justify-content: center
-    align-items: center
-    text-align: center
-    border: none
-    padding: 1rem 1.5rem
-    border-radius: 3px
-    font-size: calc(0.25rem + 0.75vw)
-    background-color: transparent
-    font-family: NewYork
-
-    &--color
-        background-color: $red
-        color: $white
-
 .main-color
     color: $red
     font-style: italic
+@media only screen and ( max-width: 1366px )
+    .container
+        width: 80%

@@ -1,0 +1,58 @@
+@import '../helpers/var'
+
+.features
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    justify-content: space-between
+    padding: 5rem 15%
+    background-color: rgba($white, 0.1)
+    grid-gap: 2.5rem
+    position: relative
+    &::before
+        content: ''
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        background-color: rgba($white, 0.15)
+        filter: blur(50%)
+        // z-index: 10
+
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: transparent
+        background-position: right
+        background-repeat: no-repeat
+        background-size: 50%
+        position: relative
+        padding: 1.5rem 0
+
+        &-1
+            background-image: url('../img/features-1.png')
+        &-2
+            background-image: url('../img/features-2.png')
+        &-3
+            background-image: url('../img/features-3.png')
+        &-4
+            background-image: url('../img/features-4.png')
+        &-5
+            background-image: url('../img/features-5.png')
+
+    &__description
+        font-size: calc(1.15rem + 0.25vw)
+        line-height: calc(1.25rem + 0.5vw)
+        font-weight: 600
+        letter-spacing: 0.20000000298023224px
+        text-align: left
+        width: 100%
+
+@media only screen and (max-width: 1600px)
+    .features
+        padding: 2.5rem 10%

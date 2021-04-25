@@ -1,7 +1,35 @@
+//- - var stagesList = [{id: 1, description: 'Виїзд майстра на обєкт для замірів'}, {id: 2, description: 'Складання кошторису згідно попередніх домовлень'}, {id: 3, description: 'Підписання договору'}, {id: 4, description: 'Закупівля матеріалу'}, {id: 5, description: 'Вчасна здача проекту'}, {id: 6, description: 'Щасливі замовники'}]
+include mixin
 section.portfolio
-    h2.portfolio__title Works
-    .portfolio__works.works
-        - for (var i = 1; i < 10; i++)
-            .works__item(class=`work-${i}`)
-                h3.work__title Lorem, ipsum.
-                p.work__description Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты.
+    h2.title.portfolio__title Портфоліо
+    h3.subtitle.portfolio__subtitle Наші роботи
+
+    .portfolio-slider#slider
+        .work
+            .work__content 
+                h4.work__title Назва проекту
+                p.work__description Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Последний, текстами дал! Переписывается, дорогу предупреждал? Имеет собрал заголовок предупреждал семь залетают океана продолжил жаренные инициал свою одна гор рукопись но наш подпоясал моей всемогущая буквенных, грамматики вдали путь домах!
+                ul.work__list.list-requierements 
+                    li.list-requierements__item
+                        span.list-requierements__caption.list-requierements__caption--bold Термін ремонта:
+                        span.list-requierements__caption 21 день
+                    li.list-requierements__item
+                        span.list-requierements__caption.list-requierements__caption--bold Площа:
+                        span.list-requierements__caption 81 м<sup>2</sup>
+         
+        #contentImg
+            .menu
+                nav
+                    a.slide(href="#" data-index="0")
+                        img(src="./img/work-1.jpg" alt="")
+                    a.slide(href="#" data-index="1")
+                        img(src="./img/work-2.jpeg" alt="")
+                    a.slide(href="#" data-index="2")
+                        img(src="./img/work-4.jpeg" alt="")    
+            #dot
+            a#leftArrow(href="#")
+                +svg('left')
+            a#rightArrow(href="#")
+                +svg('right')
+
+        //- #pagination

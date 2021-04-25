@@ -1,14 +1,19 @@
 @import '../helpers/var'
 
 .navigation
-    width: 45%
+    justify-content: space-between
+
+.navigation-menu
     display: flex
-    margin: 0 auto 0 2.5%
+    width: 60%
+    align-items: center
+    justify-content: center
+    margin: 0 auto
 
     &__inner
         display: flex
         width: 100%
-        padding: 1rem 0
+        align-items: center
         justify-content: space-between
 
     &__item
@@ -21,6 +26,20 @@
         display: flex
         justify-content: center
         align-items: center
-        width: 100%
-        padding: 1rem
-        font-size: calc(0.25rem + 1vw)
+        color: $white
+        padding: 0.5rem 0
+        transition: $transition
+        font-size: calc(1rem + 0.2vw)
+        line-height: calc(1rem + 0.75vw)
+        letter-spacing: 0.07em
+
+        &:hover,
+        &:active,
+        &:focus
+            color: $yellow
+            cursor: pointer
+            border-bottom: 2px solid $yellow
+
+// @media only screen and ( max-width: 1366px)
+//     .navigation-menu
+        // width: 70%

@@ -1,6 +1,11 @@
-section.hero
-     .container.hero--wrapper
-          h1.hero__title .qmpwwsd<b class="insert">studio</b>
-          //- p.hero__description. 
-          //-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ex ipsam natus nostrum odit sunt voluptatem. Accusantium, adipisci labore? Quibusdam.
-          //- a.hero__link.link Read more
+- var featuresList = [{id: 1, description: 'Фіксований кошторис'}, {id: 2, description: 'Працюємо без авансу'}, {id: 3, description: 'Щотижнева звітність робочого процесу'}, {id: 4, description: 'Здача роботи у зазначені терміни'}, {id: 5, description: 'Гарантія на роботу'}]
+
+section.header-content
+     .header-content__item.container--hero.hero
+          h1.hero__title.subtitle Далеко-далеко за словесными горами в стране гласных и согласных живут.
+          p.hero__description Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Проектах всеми, предложения свой которое залетают возвращайся пустился ведущими, текстов по всей инициал пунктуация оксмокс образ взгляд рукописи текстами однажды прямо. 
+          button.btn.btn--request Залишити заявку
+     ul.header-content__item.features
+          each i in featuresList
+               li(class=`features__item features__item-${i.id}`)
+                    span.features__description=i.description

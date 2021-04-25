@@ -3,46 +3,83 @@
 .about
     width: 100%
     margin: 0 auto
-    // min-height: 100vh
-    background: linear-gradient(-155deg, transparent 50%, white 50%)
-    display: flex
-    padding: 10% 0
+    display: grid
+    grid-template-columns: 35% 65%
+    justify-content: space-between
+    position: relative
+    overflow: hidden
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        right: 0
+        content: url('../img/about-before-pattern.png')
+        transform: translate(-25%, 25%) scale(1.25)
 
-    &--wrapper
-        justify-content: center
-        align-items: center
+    &__item
+        display: flex
+        width: 100%
 
-    &__description
+.about-img
+    background: $orange url('../img/about-bg.jpg') center / cover no-repeat
+    justify-content: flex-end
+    align-items: flex-end
+
+    &__legend
         display: flex
         flex-direction: column
-        justify-content: space-around
-        width: 100%
-        padding: 5%
-        text-align: right
-        align-items: flex-end
-        mix-blend-mode: difference
-    &__img
-        width: 55rem
-        height: 32.5rem
-        background-image: url("../img/aboutus.jpg")
-        background-position: center
-        background-size: 100%
-        background-repeat: no-repeat
-        border-radius: 50%
-        transition: background 1s ease
+        padding: 3rem
+        background-color: $orange-yellow
+        width: 45%
 
-        &:hover
-            background-size: 110%
-            transition: background 1s ease
+        &--top,
+        &--bottom
+            width: 100%
+            text-align: left
 
-.profile
-    &__title
-        font-size: calc(2.5rem + 0.75vw)
-        line-height: calc(2.75rem + 0.75vw)
-        width: 100%
+        &--top
+            font-family: PlayfairDisplay
+            font-size: calc(5rem + 0.25vw)
+            line-height: calc(5rem + 0.25vw)
+            margin-bottom: 1.5rem
+
+        &--bottom
+            font-size: calc(2.25rem + 0.25vw)
+            line-height: calc(3rem + 0.25vw)
+
+.about-content
+    flex-direction: column
+    padding: 20% 0
+    margin: 0 auto
+    width: 55%
 
     &__description
-        padding: 5rem 0
-        font-size: calc(0.5rem + 0.75vw)
-        line-height: calc(0.75rem + 0.75vw)
-        width: 100%
+        font-size: calc(1rem + 0.25vw)
+        line-height: calc(1rem + 0.25vw)
+        color: $black
+        margin-bottom: 2rem
+        color: $gray
+        font-family: Gilroy
+        letter-spacing: 0.20000000298023224px
+        text-align: justify
+@media only screen and (max-width: 1600px)
+    .about-content
+        padding: 15% 0
+
+@media only screen and ( max-width: 1366px )
+    .about-img__legend
+        width: 50%
+        &--top
+            font-family: PlayfairDisplay
+            font-size: calc(3.5rem + 0.25vw)
+            line-height: calc(4rem + 0.25vw)
+            margin-bottom: 1.5rem
+
+        &--bottom
+            font-size: calc(1.75rem + 0.25vw)
+            line-height: calc(2rem + 0.25vw)
+
+    .about-content
+        padding: 12.5% 0
+        width: 70%

@@ -4,7 +4,26 @@
     display: flex
     justify-content: space-evenly
     width: 100%
+    flex-direction: column
     align-items: center
-    padding: 1.5% 5%
     margin: 0 auto
-    background-color: $red
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 999
+
+    &__item
+        display: flex
+        width: 100%
+        margin: 0 auto
+        align-items: center
+        padding: 2rem 15%
+
+@media only screen and (max-width: 1600px)
+    .header
+        &__item
+            padding: 1rem 15%
+@media only screen and (max-width: 1366px)
+    .header
+        &__item
+            padding: 1rem 10%

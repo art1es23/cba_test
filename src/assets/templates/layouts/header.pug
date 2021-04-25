@@ -1,25 +1,32 @@
-- var linkValues = [{link: './index.html', name: 'Main'}, {link: './about.html', name: 'About'}, {link: './works.html', name: 'Works'}, {link: './blog.html', name: 'Blog'}, {link: './contacts.html', name: 'Contacts'}]
-- var langValues = ['UA', 'RU', 'EN']
+- var linkValues = [{link: '#about', name: 'Про нас'}, {link: '#reviews', name: 'Відгуки'}, {link: '#price', name: 'Ціни'}, {link: '#works', name: 'Наші роботи'}, {link: '#contacts', name: 'Контакти'}]
+- var phoneNumbers = ['+38 (067) 467-37-67', '+38 (067) 467-37-67']
+
 
 include mixin
 
-header(id = "header" class="header")
-    .logo
-        a.logo__link(href="#")
-            +svg('009-flamingo')
-    .menu
-        span
-    nav.navigation
-        ul.navigation__inner
-            //- +navLink('./index.html', 'Home')
-            //- +navLink('./about.html', 'About')
-            //- +navLink('./works.html', 'Works')
-            //- +navLink('./blog.html', 'Blog')
-            //- +navLink('./contacts.html', 'Contacts')
-            
-            each i in linkValues
-                +navLink(i.link, i.name)
+header(id = "header" class="header")    
 
-    .choose-language
-        each value in langValues
-            button.choose-language__item #{value}
+    .header__item.header-social
+        .header-social__item.numbers
+            each i in phoneNumbers
+                span.numbers__item #{i}
+        .header-social__item.social-menu
+            each item in socialLinks
+                li.social-menu__item
+                    a.social-menu__link(class=item) #{item}
+                        +svg(item)
+
+
+    .header__item.navigation
+        .logo
+            a.logo__link(href="#")
+                span.logo__caption Logo
+                
+        .menu
+            span
+        nav.navigation-menu
+            ul.navigation-menu__inner
+                each i in linkValues
+                    +navLink(i.link, i.name, 'navigation-menu')
+
+        button.btn.btn--order Замовити дзвінок

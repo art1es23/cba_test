@@ -1,0 +1,93 @@
+@import '../helpers/var'
+
+.stages
+    background-color: $black
+
+    &__inner
+        display: grid
+        padding: 5% 0
+
+    &__subtitle
+        color: $white
+
+.stages-list
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+
+    &__item
+        display: flex
+        flex-direction: column
+        width: 100%
+        align-items: center
+        position: relative
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 2px
+            background-color: $orange-yellow
+            top: 27.5%
+            left: 0
+            transform: translateY(-50%)
+
+        &:first-child::before,
+        &:last-child::before
+            width: 50%
+        &:first-child::before
+            transform: translate(100%, -50%)
+
+    &__circle
+        display: flex
+        justify-content: center
+        align-items: center
+        // width: 5rem
+        // height: 5rem
+        // padding: 2.5rem
+        border-radius: 50%
+        font-size: calc(2.75rem + 0.25vw)
+        line-height: calc(2.75rem + 0.5vw)
+        position: relative
+
+    &__caption
+        display: inline-block
+        margin: 1.5rem 0
+        font-size: calc(1rem + 0.25vw)
+        line-height: calc(1rem + 0.5vw)
+        text-align: center
+        padding: 0 1rem
+
+.progress-ring
+    position: relative
+    width: 100%
+    background-color: transparent
+
+    &__id
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 5rem
+        height: 5rem
+        border-radius: 50%
+        font-size: calc(2.75rem + 0.25vw)
+        line-height: calc(2.75rem + 0.5vw)
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-color: $black
+
+    &__circle
+        position: absolute
+        top: 0
+        left: 0
+        // stroke-dasharray: 10 20
+
+.circle-1
+    stroke-dasharray: 10 20
+
+@media only screen and ( max-width: 1366px )
+    .progress-ring
+        &__id
+            width: 3.5rem
+            height: 3.5rem

@@ -1,0 +1,17 @@
+- var stagesList = [{id: 1, description: 'Виїзд майстра на обєкт для замірів'}, {id: 2, description: 'Складання кошторису згідно попередніх домовлень'}, {id: 3, description: 'Підписання договору'}, {id: 4, description: 'Закупівля матеріалу'}, {id: 5, description: 'Вчасна здача проекту'}, {id: 6, description: 'Щасливі замовники'}]
+
+section.stages
+    .container.stages__inner
+        h2.title.stages__title Етапи роботи
+        h3.subtitle.stages__subtitle Як ми працюємо?
+
+        ul.stages-list
+            each i in stagesList
+                li(class=`stages-list__item stages-list__item-${i.id}`)
+                    div.stages-list__circle
+                        svg.progress-ring
+                            circle(stroke="white" stroke-width="2" fill="#000000" r="50" cx="50%" cy="50%" class=`progress-ring__circle circle-${i.id}`)
+                        span.progress-ring__id=i.id
+                    span.stages-list__caption=i.description            
+
+

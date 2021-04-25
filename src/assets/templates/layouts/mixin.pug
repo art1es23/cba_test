@@ -1,6 +1,6 @@
-mixin navLink(link, name)
-    li.navigation__item
-        a(href=link).navigation__link=name
+mixin navLink(link, name, classParrent)
+    li(class=`${classParrent}__item`)
+        a(href=link class=`${classParrent}__link`)=name
 
 mixin svg(name)
     svg

@@ -1,10 +1,11 @@
-import linse from './modules/footerLinse';
-import canvasBg from './modules/canvas';
-import showBlocks from './modules/showBlocks';
+import {
+    sliderReview,
+    sliderWorks
+} from './modules';
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('GODNESS!!!');
-    canvasBg();
-    linse();
-    showBlocks();
+    sliderWorks();
+    // console.log(sliderReview);
+
 });
