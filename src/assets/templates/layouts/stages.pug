@@ -8,10 +8,12 @@ section.stages
         ul.stages-list
             each i in stagesList
                 li(class=`stages-list__item stages-list__item-${i.id}`)
-                    div.stages-list__circle
-                        svg.progress-ring
-                            circle(stroke="white" stroke-width="2" fill="#000000" r="40" cx="50%" cy="50%" class=`progress-ring__circle circle-${i.id}`)
-                        span.progress-ring__id=i.id
+                    div(class=`stage-circle-${i.id}`).pie-wrapper
+                        .pie
+                            .left-side.half-circle
+                            .right-side.half-circle
+                        .shadow
+                        span.pie__id=i.id
                     span.stages-list__caption=i.description            
 
 
