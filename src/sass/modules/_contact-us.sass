@@ -54,6 +54,13 @@
 
 @media only screen and ( max-width: 768px)
     .contact-us
-
         &__form
             width: 75%
+@media only screen and ( max-width: 480px)
+    .contact-us
+        &__form
+            grid-template-columns: repeat(1, 1fr)
+            > *
+                grid-column: 1/2
+                width: 100%
+                margin: 0.75rem auto

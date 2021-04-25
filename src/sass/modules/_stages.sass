@@ -104,3 +104,29 @@
         &__id
             width: 3.5rem
             height: 3.5rem
+
+@media only screen and ( max-width: 600px )
+    .stages-list
+        grid-template-columns: repeat(1, 1fr)
+        grid-template-rows: repeat(6, auto)
+        &__item
+            display: grid
+            grid-template-columns: 30% 60%
+            grid-gap: 1.5rem
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                width: 2px
+                height: 100%
+                background-color: $orange-yellow
+                top: 0
+                left: 15%
+                transform: translate(-50%, 0)
+
+            &:first-child::before,
+            &:last-child::before
+                height: 50%
+                width: 2px
+            &:first-child::before
+                transform: translate(-50%, 100%)

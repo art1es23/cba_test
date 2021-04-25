@@ -1,7 +1,7 @@
 @import '../helpers/var'
 
 .portfolio
-    min-height: 100vh
+    // min-height: 100vh
     display: grid
     width: 100%
     text-align: center
@@ -240,6 +240,44 @@ img
         &__content
             width: 90%
 
+@media only screen and ( max-width: 600px)
+    .portfolio-slider
+        margin: 0
+        grid-template-columns: repeat(1,1fr)
+        grid-template-rows: repeat(2, auto)
+        grid-gap: 2.5rem
+        justify-items: center
+    .menu
+        top: 0
+        left: 0
+        transform: translate(0,-100%)
+        width: 100%
+        nav
+            display: flex
+            flex-direction: row
+            .slide
+                width: 15rem
+
+    .work
+        transform: translateY(0)
+        // margin-top: 7.5rem
+        &__content
+            padding: 1.5rem 0 7.5rem
+            width: 90%
     #contentImg
-        // margin-bottom: 15rem
-        height: 100%
+        width: 100%
+        min-height: 60vh
+@media only screen and ( max-width: 480px)
+    .work
+        &__title
+            font-size: calc(1.25rem + 0.25vw)
+            line-height: calc(1.25rem + 0.5vw)
+
+        &__description
+            margin: 1rem auto
+    .list-requierements
+        &__item
+            margin: 0.5rem 0
+        &__caption
+            font-size: calc(1rem + 0.25vw)
+            line-height: calc(1.25rem + 0.5vw)

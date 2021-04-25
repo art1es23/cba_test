@@ -2,6 +2,10 @@
 
 .navigation
     justify-content: space-between
+    transition: $transition
+    &--fixed
+        transform: translateY(-80%)
+        background-color: rgba(0,0,0,1)
 
 .navigation-menu
     display: flex
@@ -45,16 +49,22 @@
 
 @media only screen and ( max-width: 1024px)
     .navigation
+        &--fixed
+            transform: translateY(-50%)
+            background-color: rgba(0,0,0,1)
+
         &--active
-            position: fixed
-            top: 0
-            left: 0
             display: flex
             flex-direction: column
-            min-height: 100vh
+            height: 100vh
             background-color: $white
             justify-content: center
             align-items: center
+            transition: $transition
+            position: fixed
+            top: 0
+            left: 0
+            overflow: hidden
 
             & .logo
                 width: 50%
@@ -62,17 +72,23 @@
                     font-size: calc(3rem + 0.2vw)
                     line-height: calc(3rem + 0.75vw)
                     justify-content: center
-
+            & .navigation-menu
+                margin: 0 2.5rem
+                width: 100%
             & .navigation-menu__inner
                 display: flex
                 flex-direction: column
                 justify-content: space-between
+            & .navigation-menu__item
+                width: 100%
 
             & .navigation-menu__link
                 color: $black
                 font-size: calc(2rem + 0.2vw)
                 line-height: calc(2rem + 0.75vw)
                 padding: 1.5rem 0
+                width: 100%
+                text-align: center
 
             & .btn--order
                 display: none
@@ -126,6 +142,14 @@
                     transition: $transition
                     transform: rotateZ(-45deg)
 
-// @media only screen and ( max-width: 1224px)
-//     .navigation-menu
-//         width: 70%
+@media only screen and ( max-width: 480px)
+    .menu-toggle
+        margin-left: 1rem
+        width: 7.5rem
+        &--active
+            width: 3.5rem
+
+    .navigation-menu
+        &__link:hover
+            border: none
+            color: $orange-yellow

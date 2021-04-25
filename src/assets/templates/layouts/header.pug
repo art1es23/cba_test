@@ -9,13 +9,12 @@ header(id = "header" class="header")
     .header__item.header-social
         .header-social__item.numbers
             each i in phoneNumbers
-                span.numbers__item #{i}
+                a(href=`${i}`).numbers__item #{i}
         .header-social__item.social-menu
             each item in socialLinks
                 li.social-menu__item
                     a.social-menu__link(class=item) #{item}
                         +svg(item)
-
 
     .header__item.navigation
         .logo

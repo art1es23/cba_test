@@ -97,3 +97,11 @@
         &__description
             font-size: calc(1rem + 0.25vw)
             line-height: calc(1rem + 0.75vw)
+@media only screen and ( max-width: 600px )
+    .about
+        grid-template-columns: repeat(1, 1fr)
+    .about-img
+        display: none
+@media only screen and ( max-width: 480px )
+    .about-content
+        width: 94%

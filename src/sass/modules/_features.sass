@@ -65,3 +65,22 @@
         &__description
             font-size: calc(0.9rem + 0.1vw)
             line-height: calc(1.25rem + 0.5vw)
+@media only screen and (max-width: 600px)
+    .features
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        padding: 2.5rem 12.5%
+        &__item
+            width: 45%
+            height: 7.5rem
+            background-position: center
+
+        &__description
+            text-align: center
+            font-size: calc(1.15rem + 0.25vw)
+            line-height: calc(1.25rem + 0.5vw)
+@media only screen and (max-width: 480px)
+    .features
+        &__item
+            background-size: 75%
